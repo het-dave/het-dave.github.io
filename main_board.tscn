@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/cross.png" type="Texture" id=1]
+[ext_resource path="res://assets/gamegridmain.png" type="Texture" id=2]
+[ext_resource path="res://game_handler.gd" type="Script" id=3]
+[ext_resource path="res://assets/circle.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 217.361, 189.239 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 2, 7 )
+scale = Vector2( 0.247778, 0.240258 )
+script = ExtResource( 3 )
+X = ExtResource( 1 )
+O = ExtResource( 4 )
+isX = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 981, 1233 )
+scale = Vector2( 5.507, 5.44493 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 447.982, 824.116 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -16.1438, 8.32245 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 956.503, 815.791 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 24.2136, -0.00128174 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 1505.38, 815.791 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 24.2151, 4.16089 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D3"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2( 435.875, 1356.88 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( -4.03683, -12.4919 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D4"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2( 964.574, 1319.42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 8.07092, 37.4546 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D5"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2( 1529.6, 1344.39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2( -0.00488281, 8.32251 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D6"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D7" type="Area2D" parent="."]
+position = Vector2( 423.767, 1868.83 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2( 8.0712, 4.15662 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D7"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D8" type="Area2D" parent="."]
+position = Vector2( 968.61, 1848.02 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+position = Vector2( 16.1425, 29.1287 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D8"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Area2D9" type="Area2D" parent="."]
+position = Vector2( 1521.53, 1848.02 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
+position = Vector2( 4.02901, 20.8043 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D9"]
+scale = Vector2( 0.7, 0.7 )
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Area2D2" to="." method="_on_Area2D2_input_event"]
+[connection signal="input_event" from="Area2D3" to="." method="_on_Area2D3_input_event"]
+[connection signal="input_event" from="Area2D4" to="." method="_on_Area2D4_input_event"]
+[connection signal="input_event" from="Area2D5" to="." method="_on_Area2D5_input_event"]
+[connection signal="input_event" from="Area2D6" to="." method="_on_Area2D6_input_event"]
+[connection signal="input_event" from="Area2D7" to="." method="_on_Area2D7_input_event"]
+[connection signal="input_event" from="Area2D8" to="." method="_on_Area2D8_input_event"]
+[connection signal="input_event" from="Area2D9" to="." method="_on_Area2D9_input_event"]
